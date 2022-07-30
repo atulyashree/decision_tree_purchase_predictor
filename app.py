@@ -6,9 +6,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 st.set_option('deprecation.showfileUploaderEncoding', False)
 # Load the pickled model
-pickle_in = open("/content/drive/My Drive/DecisionModel.pkl","rb")
+pickle_in = open("DecisionModel.pkl","rb")
 model=pickle.load(pickle_in)
-dataset= pd.read_csv('/content/drive/My Drive/Dataset/Social_Network_Ads.csv')
+dataset= pd.read_csv('Social_Network_Ads.csv')
 x = dataset.iloc[:, 1:4].values
 
 def predict_note_authentication(UserID, Gender, Age, EstimatedSalary):
@@ -23,7 +23,7 @@ def predict_note_authentication(UserID, Gender, Age, EstimatedSalary):
 def main():
     
     html_temp = """
-   <div class="" style="background-color:blue;" >
+   <div class="" style="background-color:green;" >
    <div class="clearfix">           
    <div class="col-md-12">
    <center><p style="font-size:40px;color:white;margin-top:10px;">Poornima Institute of Engineering & Technology</p></center> 
